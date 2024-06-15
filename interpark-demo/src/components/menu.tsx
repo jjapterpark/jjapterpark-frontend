@@ -1,13 +1,26 @@
 import tw from "tailwind-styled-components";
 
+const MenuTotal = tw.div`
+  flex
+  flex-row
+  items-center
+  justify-center
+  w-full
+  px-[30px]
+  box-border
+
+`;
+
 const MenuContainer = tw.div`
   flex
   flex-row
   items-center
   h-[50px]
-  px-[30px]
+  p-0
   gap-[20px]
+  max-w-[1280px]
   w-full
+
 `;
 
 const MenuItems = tw.ul`
@@ -78,27 +91,29 @@ const StyledCategoryli = tw.li`
 
 const Menu = () => {
     return (
-        <MenuContainer>
-            <MenuItems>
-                <Styledli>뮤지컬</Styledli>
-                <Styledli>콘서트</Styledli>
-                <Styledli>스포츠</Styledli>
-                <Styledli>전시/행사</Styledli>
-                <Styledli>클래식/무용</Styledli>
-                <Styledli>아동/가족</Styledli>
-                <Styledli>연극</Styledli>
-                <Styledli>레저/캠핑</Styledli>
-                <Styledli>토핑</Styledli>
-                <Styledli>MD샵</Styledli>
-            </MenuItems>
-            <MenuStick></MenuStick>
-            <CategoryMenu>
-                <StyledCategoryli>랭킹</StyledCategoryli>
-                <StyledCategoryli>오픈공지</StyledCategoryli>
-                <StyledCategoryli>지역별</StyledCategoryli>
-                <StyledCategoryli>공연장</StyledCategoryli>
-            </CategoryMenu>
-        </MenuContainer>
+        <MenuTotal>
+            <MenuContainer>
+                <MenuItems>
+                    <Styledli>뮤지컬</Styledli>
+                    <Styledli>콘서트</Styledli>
+                    <Styledli>스포츠</Styledli>
+                    <Styledli>전시/행사</Styledli>
+                    <Styledli>클래식/무용</Styledli>
+                    <Styledli>아동/가족</Styledli>
+                    <Styledli>연극</Styledli>
+                    <Styledli>레저/캠핑</Styledli>
+                    <Styledli>토핑</Styledli>
+                    <Styledli>MD샵</Styledli>
+                </MenuItems>
+                <MenuStick></MenuStick>
+                <CategoryMenu>
+                    <StyledCategoryli>랭킹</StyledCategoryli>
+                    <StyledCategoryli>오픈공지</StyledCategoryli>
+                    <StyledCategoryli>지역별</StyledCategoryli>
+                    <StyledCategoryli>공연장</StyledCategoryli>
+                </CategoryMenu>
+            </MenuContainer>
+        </MenuTotal>
     );
 };
 
