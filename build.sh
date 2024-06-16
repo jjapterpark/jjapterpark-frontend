@@ -5,4 +5,5 @@ mkdir -p ../output
 cp -R ./.next ../output
 cp -R ./public ../output
 cp ./package.json ../output
-cp ./next.config.js ../output
+cp ./next.config.mjs ../output
+
