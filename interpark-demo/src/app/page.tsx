@@ -208,6 +208,67 @@ const ShareList = tw.ul`
 `;
 
 const ShareItem = tw.li`
+    first:ml-0
+`;
+
+const ShareFacebookItem = tw(ShareItem)`
+    bg-[url('https://openimage.interpark.com/ticket-desktop/pages/product/icon_sns.png')]
+    bg-no-repeat
+    inline-block
+    w-[27px]
+    h-[27px]
+    rounded-[50%]
+    bg-[#999]
+`;
+const ShareTwitterItem = tw(ShareItem)`
+    bg-[url('https://openimage.interpark.com/ticket-desktop/pages/product/icon_sns.png')]
+    bg-no-repeat
+    inline-block
+    w-[27px]
+    h-[27px]
+    rounded-[50%]
+    bg-[#999]
+    ml-[9px]
+    bg-[bottom]
+`;
+
+const Info = tw.ul`
+    inline-block
+    w-[505px]
+    mt-[4px]
+    ml-[25px]
+    align-top
+`;
+
+const InfoItem = tw.li`
+    mt-[15px]
+    pl-[25px]
+`;
+
+const InfoLabel = tw.li`
+    inline-block
+    w-[90px]
+    pr-[5px]
+    text-[#000]
+    text-[16px]
+    font-normal
+    leading-[160%]
+    align-top
+    border-box
+`;
+
+const InfoDesc = tw.div`
+    inline-block
+    max-w-[390px]
+    align-top
+`;
+
+const InfoText = tw.p`
+    relative
+    max-w-[415px]
+    text-[#000]
+    text-[16px]
+    leading-[160%]
 `;
 
 export default function Home() {
@@ -250,11 +311,32 @@ export default function Home() {
                                         </PrdCast>
                                         <Share>
                                             <ShareList>
-                                                <ShareItem></ShareItem>
+                                                <ShareFacebookItem></ShareFacebookItem>
+                                                <ShareTwitterItem></ShareTwitterItem>
                                             </ShareList>
                                         </Share>
                                     </PosterBoxBottom>
                                 </PosterBox>
+                                <Info>
+                                    <InfoItem>
+                                        <InfoLabel>장소</InfoLabel>
+                                        <InfoDesc>
+                                            <InfoText>서울대공원 주차광장</InfoText>
+                                        </InfoDesc>
+                                    </InfoItem>
+                                    <InfoItem>
+                                        <InfoLabel>공연기간</InfoLabel>
+                                        <InfoDesc>
+                                            <InfoText>2024.07.20 ~ 2024.07.21</InfoText>
+                                        </InfoDesc>
+                                    </InfoItem>
+                                    <InfoItem>
+                                        <InfoLabel>관람연령</InfoLabel>
+                                        <InfoDesc>
+                                            <InfoText>전체관람가</InfoText>
+                                        </InfoDesc>
+                                    </InfoItem>
+                                </Info>
                             </SummaryBody>
                         </Summary>
                     </ProductMainTop>
