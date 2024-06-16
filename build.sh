@@ -1,9 +1,5 @@
 #!/bin/sh
-npm install
-npm run build
-mkdir -p ./output
-cp -R .next ./output/.next
-cp -R public ./output/public
-cp package.json ./output/package.json
-cp next.config.mjs ./output/next.config.mjs
-cp -R src ./output/src
+cd ../
+mkdir output
+cp -R ./jjapterpark/* ./output
+cp -R ./output ./jjapterpark
