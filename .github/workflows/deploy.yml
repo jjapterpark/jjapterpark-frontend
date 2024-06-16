@@ -1,0 +1,30 @@
+name: Deploy Next.js to private Repo for Vercel
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: sh ./build.sh
+      - name: Push to personal repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.AUTO_ACTIONS }}
+        with:
+          source-directory: "output"
+          destination-github-username: "xpmxf4"
+          destination-repository-name: "jjapterpark-frontend-for-vercel"
+          user-email: ${{ secrets.EMAIL }}
+          commit-message: ${{ github.event.commits[0].message }}
+          target-branch: main
